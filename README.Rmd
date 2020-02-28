@@ -59,7 +59,7 @@ You can install the released version of googlecivic from [Github](https://github
 
 ``` {r, echo = TRUE, eval = FALSE}
 library(remotes)
-install_github("willdebras/ctar")
+install_github("willdebras/googlecivic")
 ```
 
 ## API keys

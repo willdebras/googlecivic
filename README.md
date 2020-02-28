@@ -40,7 +40,7 @@ You can install the released version of googlecivic from
 
 ``` r
 library(remotes)
-install_github("willdebras/ctar")
+install_github("willdebras/googlecivic")
 ```
 
 ## API keys
