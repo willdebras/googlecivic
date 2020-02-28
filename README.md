@@ -27,8 +27,8 @@ Create a key for the Google Civic API:
 Once you have this API key you can save it somewhere safe and supply it
 to functions in this R package.
 
-The Google Civic API offers several APIs to get information on election
-information, polling places, and political geographies of
+The Google Civic Information API offers several APIs to get information
+on election information, polling places, and political geographies of
 representatives. This package current just has a function to interface
 with the voter information endpoint, but functions will be added in the
 future to use the full API.
@@ -164,7 +164,7 @@ get_voterinfo(address = "55 e monroe, chicago, il", key = Sys.getenv("google_civ
 
 While the {googlecivic} package has documentation in the help files, it
 can be useful to see an explanation of each endpoint and each parameter
-in the functions. The [Google Civic API developer
+in the functions. The [Google Civic Information API developer
 page](https://developers.google.com/civic-information/docs/v2) contains
 reference to all of these endpoints and parameters and additional
 documentation of running individual queries outside of the context of
@@ -172,7 +172,8 @@ this package.
 
 ## Future plans
 
-  - Adding support for the other Google Civic API endpoints  
+  - Adding support for the other Google Civic Information API
+    endpoints  
   - Parsing the list of information into a formatted text object
   - Unit tests/CRAN submission :^)
 
