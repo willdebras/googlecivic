@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_voterinfo.R
 \name{get_voterinfo}
 \alias{get_voterinfo}
-\title{Title}
+\title{get_voterinfo}
 \usage{
 get_voterinfo(
   address = NULL,
@@ -11,11 +11,20 @@ get_voterinfo(
 )
 }
 \arguments{
-\item{electionid}{}
+\item{address}{Address supplied as string}
+
+\item{electionid}{An optional unique ID of an election, found here: https://www.googleapis.com/civicinfo/v2/elections.}
+
+\item{key}{API key supplied as a string. Defaults to the environmental variable called "google_civic_api." Info on how to get a key can be found here: https://developers.google.com/civic-information}
 }
 \value{
-
+Returns a list of elections, polling locations, state address info, and a normalized input of the address
 }
 \description{
-Title
+This function interacts with the voterinfo endpoint of the Google Civic Information API
+}
+\examples{
+\dontrun{
+get_voterinfo(address = "55 e monroe, chicago, il", key = Sys.getenv("google_civic_api"))
+}
 }
