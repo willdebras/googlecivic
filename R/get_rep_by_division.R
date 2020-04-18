@@ -35,7 +35,6 @@
 #' )
 #' }
 #'
-
 get_rep_by_division <- function(ocdId = NULL, levels = NULL, recursive = NULL, roles = NULL, key = Sys.getenv("google_civic_api")) {
 
   base_url <- "https://www.googleapis.com/civicinfo/v2/"
