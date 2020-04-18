@@ -23,7 +23,9 @@ get_voterinfo <- function(address = NULL, electionid = NULL, key = Sys.getenv("g
 
   url_full <- paste0(base_url, end_point)
 
-  raw_voterinfo <- httr::GET(url_full, query = list(
+  raw_voterinfo <- httr::RETRY(verb = "GET",
+                               url = url_full,
+                               query = list(
 
     address = address,
     electionId = electionid,
@@ -40,6 +42,45 @@ get_voterinfo <- function(address = NULL, electionid = NULL, key = Sys.getenv("g
     httr::content(raw_voterinfo, "text"),
     simplifyDataFrame = TRUE
   )
+
+  if (!is.null(parsed_voterinfo$error)) {
+
+    raw_voterinfo <- httr::RETRY(verb = "GET",
+                                 url = url_full,
+                                 query = list(
+                                   address = address,
+                                   electionId = 2000,
+                                   key = key
+                                 ))
+
+    parsed_voterinfo <- jsonlite::fromJSON(
+      httr::content(raw_voterinfo, "text"),
+      simplifyDataFrame = TRUE
+    )
+
+    if (!is.null(parsed_voterinfo$error)) {
+
+      stop(paste0("Error code ",
+                  parsed_voterinfo$error$code,
+                  ": ",
+                  parsed_voterinfo$error$message), call. = FALSE)
+
+    }
+
+    warning("Election ID empty, incorrect, or no upcoming elections found.")
+
+    parsed_voterinfo <- parsed_voterinfo[c("pollingLocations", "state")]
+
+  }
+
+  if (!is.null(parsed_voterinfo$error)) {
+
+    stop(paste0("Error code ",
+                parsed_voterinfo$error$code,
+                ": ",
+                parsed_voterinfo$error$message), call. = FALSE)
+
+  }
 
   return(parsed_voterinfo)
 
