@@ -2,11 +2,11 @@ Package: googlecivic
 Type: Package
 Title: Queries the Google Civic Information API
 Version: 0.1.0
-Author: William Bonnell
-Maintainer: William Bonnell <wtb3na@virginia.edu>
-Description: Interacts With the Elections, Representatives, and Divisions Endpoints 
-    of The Google Civic Information API
-License: MIT
+Authors@R: 
+    person("William", "Bonnell", role = c("aut", "cre"), email = "wtb3na@virginia.edu")
+Description: Interacts with the elections, representatives, and divisions endpoints 
+    of the Google Civic Information API.
+License: MIT + file LICENSE
 Imports: 
     httr, 
     jsonlite

@@ -16,7 +16,12 @@
 #'
 #' @examples
 #' \dontrun{
-#' get_rep_address(address = "55 e monroe, chicago, il",level="regional", role="schoolBoard", key = Sys.getenv("google_civic_api"))
+#' get_rep_address(
+#'     address = "55 e monroe, chicago, il",
+#'     level = "regional",
+#'     role = "schoolBoard",
+#'     key = Sys.getenv("google_civic_api")
+#' )
 #' }
 #'
 

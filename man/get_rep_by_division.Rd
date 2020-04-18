@@ -46,8 +46,8 @@ This function interacts with the representatives endpoint of the Google Civic In
 }
 \examples{
 \dontrun{
-get_rep_address_by_division(
-    ocdId = "ocd-division/country:us/district:dc/ward:6",
+get_rep_by_division(
+    ocdId = "ocd-division/country:us/district:dc",
     level="locality",
     recursive = TRUE
 )
