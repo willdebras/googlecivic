@@ -22,33 +22,31 @@
 
 get_rep_address <- function(address = NULL, includeOffices = NULL, levels = NULL, roles = NULL, key = Sys.getenv("google_civic_api")) {
 
-base_url <- "https://www.googleapis.com/civicinfo/v2/"
+  base_url <- "https://www.googleapis.com/civicinfo/v2/"
 
-end_point <- "representatives/"
+  end_point <- "representatives/"
 
-url_full <- paste0(base_url, end_point)
+  url_full <- paste0(base_url, end_point)
 
-raw_rep_address <- httr::GET(url_full, query = list(
+  raw_rep_address <- httr::GET(url_full, query = list(
 
-  address = address,
-  includeOffices = includeOffices,
-  levels = levels,
-  roles = roles,
-  key = key
+    address = address,
+    includeOffices = includeOffices,
+    levels = levels,
+    roles = roles,
+    key = key
 
-))
+  ))
 
-if (httr::http_type(raw_rep_address) != "application/json") {
-  stop("API didn't return JSON", call. = FALSE)
+  if (httr::http_type(raw_rep_address) != "application/json") {
+    stop("API didn't return JSON", call. = FALSE)
+  }
+
+
+  parsed_rep_address <- jsonlite::fromJSON(
+    httr::content(raw_rep_address, "text"),
+    simplifyDataFrame = TRUE
+  )
+
+  return(parsed_rep_address)
 }
-
-
-parsed_rep_address <- jsonlite::fromJSON(
-  httr::content(raw_rep_address, "text"),
-  simplifyDataFrame = TRUE
-)
-
-return(parsed_rep_address)
-
-}
-
