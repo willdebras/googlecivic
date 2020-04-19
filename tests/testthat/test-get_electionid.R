@@ -1,4 +1,4 @@
-httptest::with_mock_api({
+with_mock_api({
   test_that("get_electionid works", {
     out <- get_electionid(key = "fake key")
 
