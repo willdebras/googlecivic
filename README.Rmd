@@ -116,7 +116,8 @@ get_voterinfo(address = "55 e monroe, chicago, il", key = Sys.getenv("google_civ
 
 The election API returns a list of election informations as id, name, date and Open Civic Data Division Identifier(OCDid). We can get these data with the `get_electionid()` function that receives the API key as the only argument. 
 
-```{r, cache=TRUE}
+```{r, cache=TRUE, eval=FALSE}
+library(googlecivic)
 
 get_electionid(key = Sys.getenv("google_civic_api"))
 ```
@@ -125,7 +126,7 @@ get_electionid(key = Sys.getenv("google_civic_api"))
 
 The representatives by address API retrieves information about divisions, offices and officials' information related to an address. The `get_rep_address()` function takes an address, an office level and role as arguments. For detailed explanation of the each parameter type `?get_rep_voter`.
 
-```{r, cache=TRUE}
+```{r, cache=TRUE, eval=FALSE}
 get_rep_address(address = "55 e monroe, chicago,il", level="regional", role="schoolBoard", key = Sys.getenv("google_civic_api"))
 ```
 
@@ -133,7 +134,7 @@ get_rep_address(address = "55 e monroe, chicago,il", level="regional", role="sch
 
 This API returns a list of offices by divisions and respective officials. The `get_rep_by_division()` function takes an OCD identifier office levels and roles as parameters. The OCDid can be retrieved from the `get_electionid()` function. For detailed explanation about it type `?get_rep_by_division`.
 
-```{r, cache=TRUE}
+```{r, cache=TRUE, eval=FALSE}
 get_rep_by_division(ocdId = "ocd-division/country:us/district:dc",level="locality",recursive = TRUE)
 ```
 

@@ -104,60 +104,53 @@ of each parameter.
 library(googlecivic)
 
 get_voterinfo(address = "55 e monroe, chicago, il", key = Sys.getenv("google_civic_api"))
-#> $kind
-#> [1] "civicinfo#voterInfoResponse"
+#> $error
+#> $error$errors
+#>   domain  reason          message
+#> 1 global invalid Election unknown
 #> 
-#> $election
-#> $election$id
-#> [1] "4924"
+#> $error$code
+#> [1] 400
 #> 
-#> $election$name
-#> [1] "Illinois Presidential and State Primary Election"
-#> 
-#> $election$electionDay
-#> [1] "2020-03-17"
-#> 
-#> $election$ocdDivisionId
-#> [1] "ocd-division/country:us/state:il"
-#> 
-#> 
-#> $normalizedInput
-#> $normalizedInput$line1
-#> [1] "55 East Monroe Street"
-#> 
-#> $normalizedInput$city
-#> [1] "Chicago"
-#> 
-#> $normalizedInput$state
-#> [1] "IL"
-#> 
-#> $normalizedInput$zip
-#> [1] "60603"
-#> 
-#> 
-#> $pollingLocations
-#>   address.locationName             address.line1 address.city address.state
-#> 1    SPERTUS INSTITUTE 610 South Michigan Avenue      Chicago            IL
-#>   address.zip          notes                          sources
-#> 1       60605 SCHOOL PRIVATE Voting Information Project, TRUE
-#> 
-#> $state
-#>       name              electionInfoUrl local_jurisdiction.name
-#> 1 Illinois http://www.elections.il.gov/            Chicago city
-#>   local_jurisdiction.electionAdministrationBody.electionInfoUrl
-#> 1                               http://www.chicagoelections.com
-#>   local_jurisdiction.electionAdministrationBody.physicalAddress.line1
-#> 1                                      69 West Washington St, Ste 600
-#>   local_jurisdiction.electionAdministrationBody.physicalAddress.city
-#> 1                                                            Chicago
-#>   local_jurisdiction.electionAdministrationBody.physicalAddress.state
-#> 1                                                                  IL
-#>   local_jurisdiction.electionAdministrationBody.physicalAddress.zip
-#> 1                                                        60602-3006
-#>   local_jurisdiction.electionAdministrationBody.electionOfficials
-#> 1                   (312) 269-0990, Choliday@chicagoelections.net
-#>   local_jurisdiction.sources                          sources
-#> 1      DemocracyWorks, FALSE Voting Information Project, TRUE
+#> $error$message
+#> [1] "Election unknown"
+```
+
+## Election API
+
+The election API returns a list of election informations as id, name,
+date and Open Civic Data Division Identifier(OCDid). We can get these
+data with the `get_electionid()` function that receives the API key as
+the only argument.
+
+``` r
+library(googlecivic)
+
+get_electionid(key = Sys.getenv("google_civic_api"))
+```
+
+## Representatives Information by Address API
+
+The representatives by address API retrieves information about
+divisions, offices and officials’ information related to an address. The
+`get_rep_address()` function takes an address, an office level and role
+as arguments. For detailed explanation of the each parameter type
+`?get_rep_voter`.
+
+``` r
+get_rep_address(address = "55 e monroe, chicago,il", level="regional", role="schoolBoard", key = Sys.getenv("google_civic_api"))
+```
+
+## Representatives Information by Division API
+
+This API returns a list of offices by divisions and respective
+officials. The `get_rep_by_division()` function takes an OCD identifier
+office levels and roles as parameters. The OCDid can be retrieved from
+the `get_electionid()` function. For detailed explanation about it type
+`?get_rep_by_division`.
+
+``` r
+get_rep_by_division(ocdId = "ocd-division/country:us/district:dc",level="locality",recursive = TRUE)
 ```
 
 ### API documentation
@@ -169,13 +162,6 @@ page](https://developers.google.com/civic-information/docs/v2) contains
 reference to all of these endpoints and parameters and additional
 documentation of running individual queries outside of the context of
 this package.
-
-## Future plans
-
-  - Adding support for the other Google Civic Information API
-    endpoints  
-  - Parsing the list of information into a formatted text object
-  - Unit tests/CRAN submission :^)
 
 ## Issues
 

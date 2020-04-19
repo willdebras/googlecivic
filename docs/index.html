@@ -108,75 +108,41 @@
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">googlecivic</span>)
 
 <span class="fu"><a href="reference/get_voterinfo.html">get_voterinfo</a></span>(<span class="kw">address</span> <span class="kw">=</span> <span class="st">"55 e monroe, chicago, il"</span>, <span class="kw">key</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv</a></span>(<span class="st">"google_civic_api"</span>))
-<span class="co">#&gt; $kind</span>
-<span class="co">#&gt; [1] "civicinfo#voterInfoResponse"</span>
+<span class="co">#&gt; $error</span>
+<span class="co">#&gt; $error$errors</span>
+<span class="co">#&gt;   domain  reason          message</span>
+<span class="co">#&gt; 1 global invalid Election unknown</span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; $election</span>
-<span class="co">#&gt; $election$id</span>
-<span class="co">#&gt; [1] "4924"</span>
+<span class="co">#&gt; $error$code</span>
+<span class="co">#&gt; [1] 400</span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; $election$name</span>
-<span class="co">#&gt; [1] "Illinois Presidential and State Primary Election"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $election$electionDay</span>
-<span class="co">#&gt; [1] "2020-03-17"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $election$ocdDivisionId</span>
-<span class="co">#&gt; [1] "ocd-division/country:us/state:il"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $normalizedInput</span>
-<span class="co">#&gt; $normalizedInput$line1</span>
-<span class="co">#&gt; [1] "55 East Monroe Street"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $normalizedInput$city</span>
-<span class="co">#&gt; [1] "Chicago"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $normalizedInput$state</span>
-<span class="co">#&gt; [1] "IL"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $normalizedInput$zip</span>
-<span class="co">#&gt; [1] "60603"</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $pollingLocations</span>
-<span class="co">#&gt;   address.locationName             address.line1 address.city address.state</span>
-<span class="co">#&gt; 1    SPERTUS INSTITUTE 610 South Michigan Avenue      Chicago            IL</span>
-<span class="co">#&gt;   address.zip          notes                          sources</span>
-<span class="co">#&gt; 1       60605 SCHOOL PRIVATE Voting Information Project, TRUE</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; $state</span>
-<span class="co">#&gt;       name              electionInfoUrl local_jurisdiction.name</span>
-<span class="co">#&gt; 1 Illinois http://www.elections.il.gov/            Chicago city</span>
-<span class="co">#&gt;   local_jurisdiction.electionAdministrationBody.electionInfoUrl</span>
-<span class="co">#&gt; 1                               http://www.chicagoelections.com</span>
-<span class="co">#&gt;   local_jurisdiction.electionAdministrationBody.physicalAddress.line1</span>
-<span class="co">#&gt; 1                                      69 West Washington St, Ste 600</span>
-<span class="co">#&gt;   local_jurisdiction.electionAdministrationBody.physicalAddress.city</span>
-<span class="co">#&gt; 1                                                            Chicago</span>
-<span class="co">#&gt;   local_jurisdiction.electionAdministrationBody.physicalAddress.state</span>
-<span class="co">#&gt; 1                                                                  IL</span>
-<span class="co">#&gt;   local_jurisdiction.electionAdministrationBody.physicalAddress.zip</span>
-<span class="co">#&gt; 1                                                        60602-3006</span>
-<span class="co">#&gt;   local_jurisdiction.electionAdministrationBody.electionOfficials</span>
-<span class="co">#&gt; 1                   (312) 269-0990, Choliday@chicagoelections.net</span>
-<span class="co">#&gt;   local_jurisdiction.sources                          sources</span>
-<span class="co">#&gt; 1      DemocracyWorks, FALSE Voting Information Project, TRUE</span></pre></div>
+<span class="co">#&gt; $error$message</span>
+<span class="co">#&gt; [1] "Election unknown"</span></pre></div>
+</div>
+<div id="election-api" class="section level2">
+<h2 class="hasAnchor">
+<a href="#election-api" class="anchor"></a>Election API</h2>
+<p>The election API returns a list of election informations as id, name, date and Open Civic Data Division Identifier(OCDid). We can get these data with the <code><a href="reference/get_electionid.html">get_electionid()</a></code> function that receives the API key as the only argument.</p>
+<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">googlecivic</span>)
+
+<span class="fu"><a href="reference/get_electionid.html">get_electionid</a></span>(<span class="kw">key</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv</a></span>(<span class="st">"google_civic_api"</span>))</pre></div>
+</div>
+<div id="representatives-information-by-address-api" class="section level2">
+<h2 class="hasAnchor">
+<a href="#representatives-information-by-address-api" class="anchor"></a>Representatives Information by Address API</h2>
+<p>The representatives by address API retrieves information about divisions, offices and officials’ information related to an address. The <code><a href="reference/get_rep_address.html">get_rep_address()</a></code> function takes an address, an office level and role as arguments. For detailed explanation of the each parameter type <code>?get_rep_voter</code>.</p>
+<div class="sourceCode" id="cb7"><pre class="r"><span class="fu"><a href="reference/get_rep_address.html">get_rep_address</a></span>(<span class="kw">address</span> <span class="kw">=</span> <span class="st">"55 e monroe, chicago,il"</span>, <span class="kw">level</span><span class="kw">=</span><span class="st">"regional"</span>, <span class="kw">role</span><span class="kw">=</span><span class="st">"schoolBoard"</span>, <span class="kw">key</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv</a></span>(<span class="st">"google_civic_api"</span>))</pre></div>
+</div>
+<div id="representatives-information-by-division-api" class="section level2">
+<h2 class="hasAnchor">
+<a href="#representatives-information-by-division-api" class="anchor"></a>Representatives Information by Division API</h2>
+<p>This API returns a list of offices by divisions and respective officials. The <code><a href="reference/get_rep_by_division.html">get_rep_by_division()</a></code> function takes an OCD identifier office levels and roles as parameters. The OCDid can be retrieved from the <code><a href="reference/get_electionid.html">get_electionid()</a></code> function. For detailed explanation about it type <code><a href="reference/get_rep_by_division.html">?get_rep_by_division</a></code>.</p>
+<div class="sourceCode" id="cb8"><pre class="r"><span class="fu"><a href="reference/get_rep_by_division.html">get_rep_by_division</a></span>(<span class="kw">ocdId</span> <span class="kw">=</span> <span class="st">"ocd-division/country:us/district:dc"</span>,<span class="kw">level</span><span class="kw">=</span><span class="st">"locality"</span>,<span class="kw">recursive</span> <span class="kw">=</span> <span class="fl">TRUE</span>)</pre></div>
 <div id="api-documentation" class="section level3">
 <h3 class="hasAnchor">
 <a href="#api-documentation" class="anchor"></a>API documentation</h3>
 <p>While the {googlecivic} package has documentation in the help files, it can be useful to see an explanation of each endpoint and each parameter in the functions. The <a href="https://developers.google.com/civic-information/docs/v2">Google Civic Information API developer page</a> contains reference to all of these endpoints and parameters and additional documentation of running individual queries outside of the context of this package.</p>
 </div>
-</div>
-<div id="future-plans" class="section level2">
-<h2 class="hasAnchor">
-<a href="#future-plans" class="anchor"></a>Future plans</h2>
-<ul>
-<li>Adding support for the other Google Civic Information API endpoints<br>
-</li>
-<li>Parsing the list of information into a formatted text object</li>
-<li>Unit tests/CRAN submission :^)</li>
-</ul>
 </div>
 <div id="issues" class="section level2">
 <h2 class="hasAnchor">
