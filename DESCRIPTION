@@ -11,6 +11,9 @@ Imports:
     httr, 
     jsonlite
 Depends: R (>= 2.10)
+Suggests:
+    httptest,
+    testthat
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
