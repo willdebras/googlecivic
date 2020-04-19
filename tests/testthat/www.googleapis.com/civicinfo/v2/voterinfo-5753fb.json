@@ -1,0 +1,555 @@
+{
+    "kind": "civicinfo#voterInfoResponse",
+    "election": {
+        "id": "4964",
+        "name": "DC Presidential and State Primary Election",
+        "electionDay": "2020-06-02",
+        "ocdDivisionId": "ocd-division/country:us/district:dc"
+    },
+    "normalizedInput": {
+        "line1": "1600 Pennsylvania Avenue Northwest",
+        "city": "Washington",
+        "state": "DC",
+        "zip": "20500"
+    },
+    "pollingLocations": [
+        {
+            "address": {
+                "locationName": "THE SCHOOL WITHOUT WALLS",
+                "line1": "2130 G ST NW",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20037"
+            },
+            "notes": "",
+            "pollingHours": "7 AM - 8 PM EST",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        }
+    ],
+    "earlyVoteSites": [
+        {
+            "address": {
+                "locationName": "Old Council Chambers One Judiciary Square",
+                "line1": "441 4TH STREET NW",
+                "line3": "WARD 2",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20001"
+            },
+            "notes": "Closest Metro Stop: Judiciary Square, <0.1 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "OLD COUNCIL CHAMBERS ONE JUDICIARY SQUARE",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "OJS - One Judiciary Square",
+                "line1": "441 4TH STREET NW",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20001"
+            },
+            "notes": "Closest Metro Stop: Judiciary Square, <0.1 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "OJS - ONE JUDICIARY SQUARE",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-16",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Masonic Temple",
+                "line1": "1000 U STREET NW",
+                "line3": "WARD 1",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20001"
+            },
+            "notes": "Closest Metro Stop: U Street/Cardozo, <0.1 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "MASONIC TEMPLE ",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Columbia Heights Community Center",
+                "line1": "1480 GIRARD STREET NW",
+                "line3": "WARD 1",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20009"
+            },
+            "notes": "Closest Metro Stop: Columbia Heights, <0.3 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "COLUMBIA HEIGHTS COMMUNITY CENTER",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Sherwood Recreation Center",
+                "line1": "640 10TH STREET NE",
+                "line3": "WARD 6",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20024"
+            },
+            "notes": "Closest Metro Stop: Union Station, <1.1 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "SHERWOOD RECREATION CENTER",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "King Greenleaf Recreation Center",
+                "line1": "201 N STREET SW",
+                "line3": "WARD 6",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20024"
+            },
+            "notes": "Closest Metro Stop: Waterfront, <0.4 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "KING GREENLEAF RECREATION CENTER",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Trinidad Recreation Center",
+                "line1": "1310 CHILDRESS ST NE",
+                "line3": "WARD 5",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20002"
+            },
+            "notes": "Closest Metro Stop: Stadium Armory, <2.0 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "TRINIDAD RECREATION CENTER",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Cleveland Park Neighborhood Library",
+                "line1": "3310 CONNECTICUT AVENUE NW",
+                "line3": "WARD 3",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20008"
+            },
+            "notes": "Closest Metro Stop: Cleveland Park, <0.1 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "CLEVELAND PARK NEIGHBORHOOD LIBRARY",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Berry Farm Recreation Center",
+                "line1": "1230 SUMMER ROAD SE",
+                "line3": "WARD 8",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20020"
+            },
+            "notes": "Closest Metro Stop: Anacostia, <0.1 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "BARRY FARM RECREATION CENTER",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Emery Heights Community Center",
+                "line1": "5801 GEORGIA AVENUE NW",
+                "line3": "WARD 4",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20011"
+            },
+            "notes": "Closest Metro Stop: Georgia Avenue/Petworth, <0.5",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "EMERY HEIGHTS COMMUNITY CENTER",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Turkey Thicket Recreation Center",
+                "line1": "1100 MICHIGAN AVENUE NE",
+                "line3": "WARD 5",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20017"
+            },
+            "notes": "Closest Metro Stop: Brookland/CUA, <0.4 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "TURKEY THICKET RECREATION CENTER",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Benning Stoddert Community Center",
+                "line1": "100 STODDERT PLACE SE",
+                "line3": "WARD 7",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20019"
+            },
+            "notes": "Closest Metro Stop: Benning Road, <0.3 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "BENNING STODDERT COMMUNITY CENTER",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Takoma Community Center",
+                "line1": "300 VAN BUREN STREET NW",
+                "line3": "WARD 4",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20011"
+            },
+            "notes": "Closest Metro Stop: Takoma Metro, <0.5 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "TAKOMA COMMUNITY CENTER",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Malcolm X Elementary School",
+                "line1": "1351 ALABAMA AVENUE SE",
+                "line3": "WARD 8",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20032"
+            },
+            "notes": "Closest Metro Stop: Congress Heights, < 0.1 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "MALCOLM X ELEMENTARY SCHOOL",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Deanwood Recreation Center",
+                "line1": "1350 49TH STREET NE",
+                "line3": "WARD 7",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20019"
+            },
+            "notes": "Closest Metro Stop: Deanwood Metro, <0.1 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "DEANWOOD RECREATION CENTER",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "address": {
+                "locationName": "Chevy Chase Community Center",
+                "line1": "5601 CONNECTICUT AVENUE NW",
+                "line3": "WARD 3",
+                "city": "WASHINGTON",
+                "state": "DC",
+                "zip": "20015"
+            },
+            "notes": "Closest Metro Stop: Friendship Heights, <0.7 miles",
+            "pollingHours": "8:30 AM - 7 PM",
+            "name": "CHEVY CHASE COMMUNITY CENTER",
+            "voterServices": "Open Sundays",
+            "startDate": "2020-05-21",
+            "endDate": "2020-05-29",
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        }
+    ],
+    "contests": [
+        {
+            "type": "PRIMARY",
+            "primaryParty": "STATEHOOD GREEN",
+            "district": {
+                "name": "DISTRICT OF COLUMBIA"
+            },
+            "ballotPlacement": "2",
+            "candidates": [
+                {
+                    "name": "CANDIDATE #1",
+                    "party": "STATEHOOD GREEN"
+                },
+                {
+                    "name": "CANDIDATE #2",
+                    "party": "STATEHOOD GREEN"
+                }
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "PRIMARY",
+            "primaryParty": "REPUBLICAN",
+            "district": {
+                "name": "DISTRICT OF COLUMBIA"
+            },
+            "ballotPlacement": "2",
+            "candidates": [
+                {
+                    "name": "CANDIDATE #2",
+                    "party": "REPUBLICAN"
+                },
+                {
+                    "name": "CANDIDATE #1",
+                    "party": "REPUBLICAN"
+                }
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "PRIMARY",
+            "primaryParty": "DEMOCRATIC",
+            "district": {
+                "name": "DISTRICT OF COLUMBIA"
+            },
+            "ballotPlacement": "2",
+            "candidates": [
+                {
+                    "name": "CANDIDATE #2",
+                    "party": "DEMOCRATIC"
+                },
+                {
+                    "name": "CANDIDATE #1",
+                    "party": "DEMOCRATIC"
+                }
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        },
+        {
+            "type": "PRIMARY",
+            "primaryParty": "LIBERTARIAN",
+            "district": {
+                "name": "DISTRICT OF COLUMBIA"
+            },
+            "ballotPlacement": "2",
+            "candidates": [
+                {
+                    "name": "CANDIDATE #2",
+                    "party": "LIBERTARIAN"
+                },
+                {
+                    "name": "CANDIDATE #1",
+                    "party": "LIBERTARIAN"
+                }
+            ],
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        }
+    ],
+    "state": [
+        {
+            "name": "District Of Columbia",
+            "electionAdministrationBody": {
+                "name": "DC Board of Elections",
+                "electionInfoUrl": "https://www.dcboe.org",
+                "electionRegistrationUrl": "https://www.dcboe.org",
+                "electionRegistrationConfirmationUrl": "https://www.dcboe.org/Voters/Register-To-Vote/Check-Voter-Registration-Status",
+                "absenteeVotingInfoUrl": "https://dcboe.org/Voters/Absentee-Voting/Track-Absentee-Ballot",
+                "votingLocationFinderUrl": "https://www.vote4dc.com/SearchElection/SearchByAddress",
+                "hoursOfOperation": "8:15 AM - 4:45 PM",
+                "correspondenceAddress": {
+                    "locationName": "Capitol Riverfront",
+                    "line1": "1015 Half Street SE",
+                    "line2": "Suite 750",
+                    "city": "Washington",
+                    "state": "DC",
+                    "zip": "20003"
+                },
+                "physicalAddress": {
+                    "locationName": "Capitol Riverfront",
+                    "line1": "1015 Half Street SE",
+                    "line2": "Suite 750",
+                    "city": "Washington",
+                    "state": "DC",
+                    "zip": "20003"
+                }
+            },
+            "local_jurisdiction": {
+                "name": "WASHINGTON",
+                "electionAdministrationBody": {
+                    "name": "DC Board of Elections",
+                    "electionInfoUrl": "https://www.dcboe.org",
+                    "electionRegistrationUrl": "https://www.dcboe.org",
+                    "electionRegistrationConfirmationUrl": "https://www.dcboe.org/Voters/Register-To-Vote/Check-Voter-Registration-Status",
+                    "absenteeVotingInfoUrl": "https://dcboe.org/Voters/Absentee-Voting/Track-Absentee-Ballot",
+                    "votingLocationFinderUrl": "https://www.vote4dc.com/SearchElection/SearchByAddress",
+                    "hoursOfOperation": "8:15 AM - 4:45 PM",
+                    "correspondenceAddress": {
+                        "locationName": "Capitol Riverfront",
+                        "line1": "1015 Half Street SE",
+                        "line2": "Suite 750",
+                        "city": "Washington",
+                        "state": "DC",
+                        "zip": "20003"
+                    },
+                    "physicalAddress": {
+                        "locationName": "Capitol Riverfront",
+                        "line1": "1015 Half Street SE",
+                        "line2": "Suite 750",
+                        "city": "Washington",
+                        "state": "DC",
+                        "zip": "20003"
+                    }
+                },
+                "sources": [
+                    {
+                        "name": "Voting Information Project",
+                        "official": true
+                    }
+                ]
+            },
+            "sources": [
+                {
+                    "name": "Voting Information Project",
+                    "official": true
+                }
+            ]
+        }
+    ]
+}
