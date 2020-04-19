@@ -17,7 +17,8 @@ ocd_divisions <- read.csv(
   colClasses = c(
     "validThrough" = "Date",
     "validFrom" = "Date"
-  )
+  ),
+  encoding = "UTF-8"
 )
 
 usethis::use_data(ocd_divisions, overwrite = TRUE)

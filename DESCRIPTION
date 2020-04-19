@@ -7,10 +7,10 @@ Authors@R:
 Description: Interacts with the elections, representatives, and divisions endpoints 
     of the Google Civic Information API.
 License: MIT + file LICENSE
+Depends: R (>= 2.10)
 Imports: 
     httr, 
     jsonlite
-Depends: R (>= 2.10)
 Suggests:
     httptest,
     testthat
