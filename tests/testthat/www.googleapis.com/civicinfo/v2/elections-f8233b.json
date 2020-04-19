@@ -1,0 +1,23 @@
+{
+    "kind": "some other thing",
+    "elections": [
+        {
+            "id": "2000",
+            "name": "VIP Test Election",
+            "electionDay": 1,
+            "ocdDivisionId": "ocd-division/country:us"
+        },
+        {
+            "id": "4950",
+            "name": "Michigan Consolidated Election",
+            "electionDay": 2,
+            "ocdDivisionId": "ocd-division/country:us/state:mi"
+        },
+        {
+            "id": "4964",
+            "name": "DC Presidential and State Primary Election",
+            "electionDay": 3,
+            "ocdDivisionId": "ocd-division/country:us/district:dc"
+        }
+    ]
+}
