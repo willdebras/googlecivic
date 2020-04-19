@@ -2,8 +2,16 @@ Package: googlecivic
 Type: Package
 Title: Queries the Google Civic Information API
 Version: 0.1.0
-Authors@R: 
-    person("William", "Bonnell", role = c("aut", "cre"), email = "wtb3na@virginia.edu")
+Authors@R: c(
+    person("William", "Bonnell", role = c("aut", "cre"), email = "wtb3na@virginia.edu"),
+    person(given = "Edward",
+       family = "Visel",
+       role = c("ctb"),
+       email = "edward.visel@gmail.com",
+       comment = c(ORCID = "0000-0002-2811-6254")),
+    person(given = "Natalia",
+       family = "Block",
+       role = c("ctb")))
 Description: Interacts with the elections, representatives, and divisions endpoints 
     of the Google Civic Information API.
 License: MIT + file LICENSE
