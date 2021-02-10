@@ -23,15 +23,23 @@
 
     url_full <- paste0(base_url, end_point)
 
-    raw_voterinfo <- httr::RETRY(verb = "GET",
-                                 url = url_full,
-                                 query = list(
-
-      address = address,
-      electionId = electionid,
-      key = key
-
-    ))
+#    raw_voterinfo <- httr::RETRY(verb = "GET",
+#                                 url = url_full,
+#                                 query = list(
+#
+#      address = address,
+#      electionId = electionid,
+#      key = key
+#
+#    ))
+    
+          raw_voterinfo <- httr::GET(
+                                   url = url_full,
+                                   query = list(
+                                     address = address,
+                                     electionId = 2000,
+                                     key = key
+                                   ))
 
     if (httr::http_type(raw_voterinfo) != "application/json") {
       stop("API didn't return JSON", call. = FALSE)
