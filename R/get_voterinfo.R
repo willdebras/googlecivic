@@ -45,7 +45,15 @@
 
     if (!is.null(parsed_voterinfo$error)) {
 
-      raw_voterinfo <- httr::RETRY(verb = "GET",
+#      raw_voterinfo <- httr::RETRY(verb = "GET",
+#                                   url = url_full,
+#                                   query = list(
+#                                     address = address,
+#                                     electionId = 2000,
+#                                     key = key
+#                                   ))
+      
+      raw_voterinfo <- httr::GET(
                                    url = url_full,
                                    query = list(
                                      address = address,
