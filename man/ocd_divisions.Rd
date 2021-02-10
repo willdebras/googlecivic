@@ -4,7 +4,8 @@
 \name{ocd_divisions}
 \alias{ocd_divisions}
 \title{Open Civic Data Division Identifiers}
-\format{A data frame with 193,493 row and 13 columns, including
+\format{
+A data frame with 193,493 row and 13 columns, including
 \itemize{
 \item id
 \item name
@@ -19,7 +20,8 @@
 \item sch_dist_stateid
 \item state_id
 \item validFrom
-}}
+}
+}
 \source{
 \href{https://github.com/opencivicdata/ocd-division-ids/blob/master/identifiers/country-us.csv}{OpenCivicData}
 }
